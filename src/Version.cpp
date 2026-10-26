@@ -30,7 +30,7 @@ class $modify (GameObject)
                 pRet->m_objectType = GameObjectType::Modifier;
                 pRet->m_unk390 = as<int>(GameObjectType::Modifier);
 
-                if (CCSprite* newSpr = CCSprite::create("alphalaneous.old_color_triggers/edit_eTintLBtn_001.png"))
+                if (CCSprite* newSpr = CCSprite::create("alphalaneous.tinker/edit_eTintLBtn_001.png"))
                 {
                     pRet->m_hasCustomChild = true;
                     pRet->setTexture(newSpr->getTexture());
@@ -1288,7 +1288,7 @@ std::vector<CCMenuItemToggler*> VersionUtils::getTabs(std::string version)
     spr1->setColor(ccBLACK);
     spr2->setColor(ccBLACK);
 
-    TAB_SPRITE(CCSprite::create("alphalaneous.old_color_triggers/edit_eTintBGBtn_001.png"));
+    TAB_SPRITE((CCSprite::create("alphalaneous.tinker/edit_eTintBGBtn_001.png") ?: CCSprite::createWithSpriteFrameName("sawblade_02_001.png")));
 
     return tabs;
 }
